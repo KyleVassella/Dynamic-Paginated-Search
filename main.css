@@ -117,23 +117,3 @@ body{
       background-color: #4ba6c3;
       color: #fff;
     }
-
-/*
-input {
-border: 20px solid black;
-}
-*/
-
-/*
- ---- CSS from the filter example: ---- 
- .student-item.cf:nth-of-type(n+11) {
-            display: none;
-        }
-*/
-
-
-/*.pageButtons button {
-  background-image: linear-gradient(#99CCFF,#CCFFFF);
-  border-radius: 20%;
-  border: 1px solid grey;
-}*/
