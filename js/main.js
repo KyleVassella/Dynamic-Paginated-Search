@@ -68,7 +68,7 @@ dynamicPageButtons();
       $(allStudents).animate({opacity: '1'}, '1');      //  crucial reset of the visibility state of allStudents (otherwise search function visually breaks after clicking a pagination button)
       $(allStudents).hide();
       $('.sorry').remove();   // removes any 'Sorry, we were unable to find a result' messages
-      allStudents = [];   // empties the allStudents array, making room for only matched students to be included in array (code for that directly below)
+      allStudents = [];   // empties the allStudents array, making room for only matched students to be included in array
       $('.student-item').each(function () {
         var namesAndEmails = $(this).find('.student-details').text().toLowerCase();
         if ( namesAndEmails.indexOf(searchText) !== -1) {
