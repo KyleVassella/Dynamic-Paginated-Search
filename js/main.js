@@ -11,16 +11,6 @@ var onPageLoad = function() {
   currentPage = 1;
 };
 
-  // custom .hide() and .show() event handlers for showArray2() animations
-var fadeOut = function() {
-  $(this).animate({opacity: '0'}, '3s');
-};
-
-var fadeIn = function() {
-  $(this).animate({opacity: '1'}, '.3s');
-};
-
-
   // displays students (ten per page) whose name or email contains what the user types into the search input
 var showArray = function() {
   if (allStudents.length > 0) {  
@@ -34,7 +24,7 @@ var showArray = function() {
     
   // a second showArray expression for use with the pagination buttons (so that animations only happen when pagination buttons are clicked, not when the search bar is used)
 var showArray2 = function() {
-  $(allStudents).hide(fadeOut).slice((currentPage - 1) * pageSize, ((currentPage - 1) * pageSize) + pageSize).show(fadeIn);  // shows ten students per page
+  $(allStudents).css('opacity', '0').slice((currentPage - 1) * pageSize, ((currentPage - 1) * pageSize) + pageSize).css('opacity', '1');  // broken .css() fade-in :(
 };
 
 
@@ -62,7 +52,7 @@ dynamicPageButtons();
     
   // dynamic search function
 $('.page-header input').keyup(function() {
-  searchText = $('.page-header input').val().toLowerCase();
+  searchText = $('.page-header input').val().toLowerCase().trim();
   console.log(searchText);
   $(allStudents).animate({opacity: '1'}, '1');  // crucial reset of the visibility state of allStudents (otherwise search function visually breaks after clicking a pagination button)
   $(allStudents).hide();

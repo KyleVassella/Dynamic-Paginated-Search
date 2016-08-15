@@ -117,3 +117,8 @@ body{
       background-color: #4ba6c3;
       color: #fff;
     }
+
+/* Makes the opacity fade in and out smoothly when page buttons are pressed*/
+    .student-item {
+      transition: opacity 1s;
+    }
